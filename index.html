@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <title>Conductor elegido</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="container">
+            <form action="">
+                <div class="row">
+                    <div class="col s12">
+                        <img class="logo" src="img/logo-sura.png" alt="">
+                    </div>
+                    <div class="col s12">
+                        <h1>
+                            Solicitar conductor elegido
+                        </h1>
+        
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <label>Fecha</label>
+                            <input type="text" class="datepicker" placeholder="aaaa/mm/dd">
+                        </div>
+                        <div  class="col s12 m6">
+                            <label>Hora</label>
+                            <input type="text" class="timepicker" placeholder="hh:mm">
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <h2>
+                            Dirección Origen 
+                        </h2>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card horizontal" onclick="openMap()">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Origen 
+                                    </span>
+                                    <span class="card-text">
+                                        Seleccione lugar donde iniciará su viaje
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="img/movile.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card horizontal" onclick="openMap()">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Destino
+                                    </span>
+                                    <span class="card-text">
+                                        Seleccione lugar donde finalizará su viaje
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="img/carro.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light btn-fullw" type="submit" name="action"> 
+                            Aceptar
+                        </button>
+                    </div>
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    <div class="row row-mapa" id="contMapa">
+        <div class="col s12">
+            <button class="btn waves-effect waves-light btn-map" type="submit" name="action" onclick="closeMap()">
+                Aceptar
+            </button>
+            <input id="searchTextField" type="text" size="50" placeholder="Anything you want!">
+        </div>
+        <div id="map">
+        </div>
+    </div>
+    <script type="text/javascript" src="js/logica.js"></script>
+    <script type="text/javascript" src="js/material/materialize.js"></script>
+    <script type="text/javascript" src="js/material/materialize.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoKBlPtCKJoTM1W20LxhR7bIsXFJryOa8&callback=initMap&libraries=places"
+    async defer>
+    </script>
+</body>
+</html>
